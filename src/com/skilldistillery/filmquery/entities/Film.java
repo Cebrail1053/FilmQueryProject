@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Film {
 	private List<Actor> actors;
+	private String language;
 	private Integer id;
 	private String title;
 	private String description;
@@ -15,6 +16,10 @@ public class Film {
 	private Double replacementCost;
 	private String rating;
 	private String specialFeatures;
+
+	public Film() {
+
+	}
 
 	public Film(Integer id, String title, String description, Integer releaseYear, Integer languageId,
 			Integer rentalDuration, Double rentalRate, Integer length, Double replacementCost, String rating,
@@ -233,6 +238,22 @@ public class Film {
 		builder.append(specialFeatures);
 		builder.append("]");
 		return builder.toString();
+	}
+
+	public List<Actor> getActors() {
+		return actors;
+	}
+
+	public void setActors(List<Actor> actors) {
+		this.actors = actors;
+	}
+
+	public String getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(String language) {
+		this.language = language;
 	}
 
 }
